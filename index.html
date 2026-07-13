@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexo SAS — Consultoría educativa</title>
+<meta name="description" content="Consultoría educativa para la transición y el sostenimiento de una cultura digital: desarrollo de software, asesoría en procesos educativos y asesoría en talento humano.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.44.0/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .hero{
+    padding:80px 0 84px; border-bottom:1px solid var(--line);
+    background-image: radial-gradient(circle, rgba(2,48,71,0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .hero-grid{ display:grid; grid-template-columns:1.15fr 0.85fr; gap:60px; align-items:center; }
+  .hero h1{ font-size:clamp(34px,4.6vw,56px); margin:18px 0 24px; }
+  .hero h1 em{ font-style:italic; color:var(--bluegreen); }
+  .hero p.lead{ font-size:18px; color:var(--muted); max-width:52ch; margin-bottom:34px; font-family:var(--sans); }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:44px; }
+  .principles{ display:flex; gap:22px; flex-wrap:wrap; }
+  .principle{ font-family:var(--mono); font-size:12px; color:var(--navy); display:flex; align-items:center; gap:8px; }
+  .principle .dot{ width:9px; height:9px; border-radius:2px; display:inline-block; }
+  .hero-visual{ position:relative; display:flex; align-items:center; justify-content:center; }
+  .hero-visual > svg:first-child{ filter:drop-shadow(0 22px 36px rgba(2,48,71,0.28)); }
+  .stair{ position:absolute; opacity:0.55; }
+  .stair.s1{ top:-6px; right:0; width:110px; transform:rotate(8deg); opacity:0.35; }
+  .stair.s2{ bottom:-18px; left:-6px; width:84px; transform:rotate(-12deg); opacity:0.28; }
+
+  .pillars{ padding:80px 0; border-bottom:1px solid var(--line); }
+  .pillars .head{ max-width:640px; margin-bottom:12px; }
+  .pillars h2{ font-size:clamp(26px,3.2vw,34px); margin-top:14px; }
+  .pillars .head p{ color:var(--muted); font-size:16px; margin-top:14px; font-family:var(--sans); }
+
+  .pillar-list{ margin-top:36px; }
+  .pillar{
+    position:relative; display:grid; grid-template-columns:90px 1fr 160px; gap:24px; align-items:center; padding:28px 0;
+    border-top:1px solid var(--line); text-decoration:none; transition:background 0.2s ease, padding-left 0.2s ease;
+  }
+  .pillar:last-child{ border-bottom:1px solid var(--line); }
+  .pillar::before{
+    content:""; position:absolute; left:-1px; top:8px; bottom:8px; width:3px; border-radius:2px;
+    background:var(--tiger); transform:scaleY(0); transition:transform 0.25s ease;
+  }
+  .pillar:hover{ background:#f2fafd; padding-left:8px; }
+  .pillar:hover::before{ transform:scaleY(1); }
+  .pillar .num{ font-family:var(--display); font-size:40px; color:var(--sky); }
+  .pillar h3{ font-size:21px; color:var(--navy); font-family:var(--sans); font-weight:600; }
+  .pillar p{ color:var(--muted); font-size:14.5px; margin-top:6px; font-family:var(--sans); max-width:56ch; }
+  .pillar .goto{ font-family:var(--mono); font-size:12px; color:var(--tiger); text-align:right; white-space:nowrap; }
+  @media (max-width:760px){ .pillar{ grid-template-columns:50px 1fr; } .pillar .goto{ display:none; } }
+
+  .cta-band h2{ max-width:20ch; }
+
+  @media (max-width:880px){ .hero-grid{ grid-template-columns:1fr; } .hero-visual{ order:-1; max-width:260px; margin:0 auto 20px; } }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" class="brand" aria-label="Nexo SAS, inicio">
+      <svg viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="24" y1="68" x2="64" y2="28" stroke="#023047" stroke-width="2" stroke-opacity="0.25"/>
+        <rect x="10" y="54" width="28" height="28" rx="6" fill="#8ecae6" stroke="#219ebc" stroke-width="1.5"/>
+        <rect x="30" y="34" width="28" height="28" rx="6" fill="#219ebc"/>
+        <rect x="50" y="14" width="28" height="28" rx="6" fill="#023047"/>
+      </svg>
+      <span class="brand-word">NEXO<span>SAS</span></span>
+    </a>
+    <div class="nav-right">
+      <nav class="main-nav" id="mainNav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="equipo.html">Equipo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <a href="contacto.html" class="cta-btn">Agendar conversación</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav"><i class="ti ti-menu-2"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Consultoría educativa · tecnología y procesos</p>
+      <h1>La cultura digital de tu institución, convertida en <em>un sistema</em>.</h1>
+      <p class="lead">Diseñamos e implementamos el software y los procesos que necesita tu colegio para operar con datos, no con suposiciones — desde calificaciones y asistencia hasta un asistente de IA que analiza todo lo que ya generas.</p>
+      <div class="hero-ctas">
+        <a href="servicios.html" class="btn-primary"><i class="ti ti-arrow-right"></i> Ver servicios en detalle</a>
+        <a href="equipo.html" class="btn-secondary">Conocer al equipo</a>
+      </div>
+      <div class="principles">
+        <span class="principle"><span class="dot" style="background:#8ecae6"></span>Sistémico</span>
+        <span class="principle"><span class="dot" style="background:#219ebc"></span>Sistematizado</span>
+        <span class="principle"><span class="dot" style="background:#023047"></span>Sistemático</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" style="width:220px" aria-hidden="true">
+        <line x1="24" y1="68" x2="64" y2="28" stroke="#023047" stroke-width="1.6" stroke-opacity="0.3"/>
+        <rect x="10" y="54" width="28" height="28" rx="7" fill="#8ecae6" stroke="#219ebc" stroke-width="1.5"/>
+        <rect x="30" y="34" width="28" height="28" rx="7" fill="#219ebc"/>
+        <rect x="50" y="14" width="28" height="28" rx="7" fill="#023047"/>
+      </svg>
+      <svg class="stair s1" viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="10" y="54" width="28" height="28" rx="7" fill="#ffb703"/><rect x="30" y="34" width="28" height="28" rx="7" fill="#fb8500"/><rect x="50" y="14" width="28" height="28" rx="7" fill="#023047"/>
+      </svg>
+      <svg class="stair s2" viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="10" y="54" width="28" height="28" rx="7" fill="#8ecae6"/><rect x="30" y="34" width="28" height="28" rx="7" fill="#219ebc"/><rect x="50" y="14" width="28" height="28" rx="7" fill="#023047"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="pillars">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Qué hacemos</p>
+      <h2>Tres frentes, un mismo sistema</h2>
+      <p>No vendemos software por un lado y asesoría por otro. Cada herramienta responde a un proceso institucional real, y cada proceso queda documentado y medible. Este es el resumen — el desglose completo está en Servicios.</p>
+    </div>
+    <div class="pillar-list reveal">
+      <a href="servicios.html#software" class="pillar">
+        <span class="num">01</span>
+        <div><h3>Desarrollo de software</h3><p>Calificaciones, asistencia, planeación con IA, LMS personalizado, gestión administrativa y un asistente de IA transversal.</p></div>
+        <span class="goto">Ver detalle →</span>
+      </a>
+      <a href="servicios.html#procesos" class="pillar">
+        <span class="num">02</span>
+        <div><h3>Asesoría en gestión de procesos educativos</h3><p>Diagnóstico, documentación de procesos, análisis de encuestas institucionales e indicadores de calidad.</p></div>
+        <span class="goto">Ver detalle →</span>
+      </a>
+      <a href="servicios.html#talento" class="pillar">
+        <span class="num">03</span>
+        <div><h3>Asesoría en talento humano</h3><p>Asignación docente basada en datos, control de ausentismo, bienestar y acompañamiento en selección.</p></div>
+        <span class="goto">Ver detalle →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <h2>¿Listo para ver cómo encaja esto en tu institución?</h2>
+      <p>Una conversación de 30 minutos basta para entender tu contexto y proponerte algo concreto.</p>
+    </div>
+    <a href="contacto.html" class="btn-primary"><i class="ti ti-calendar-event"></i> Agendar una cita</a>
+  </div>
+</section>
+
+<footer class="site" id="contacto-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px" aria-hidden="true">
+            <rect x="10" y="54" width="28" height="28" rx="6" fill="#8ecae6"/><rect x="30" y="34" width="28" height="28" rx="6" fill="#219ebc"/><rect x="50" y="14" width="28" height="28" rx="6" fill="#fb8500"/>
+          </svg>
+          <span class="brand-word">NEXO<span>SAS</span></span>
+        </div>
+        <p class="footer-tag">Consultoría educativa para la transición y el sostenimiento de una cultura digital.</p>
+      </div>
+      <div class="footer-cta">
+        <a href="mailto:contacto@nexosas.com"><i class="ti ti-mail"></i> contacto@nexosas.com</a>
+        <a href="contacto.html"><i class="ti ti-calendar-event"></i> Agendar una cita</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nexo SAS</p>
+      <div class="footer-principles"><span>Sistémico</span><span>·</span><span>Sistematizado</span><span>·</span><span>Sistemático</span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/nav.js"></script>
+<script src="assets/chatbot.js"></script>
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:0.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

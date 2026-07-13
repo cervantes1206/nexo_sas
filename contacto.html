@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — Nexo SAS</title>
+<meta name="description" content="Agenda una conversación con Nexo SAS y cuéntanos sobre tu institución educativa para coordinar una llamada de 30 minutos, sin compromiso.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.44.0/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:0; border-top:1px solid var(--line-strong); }
+  .contact-col{ padding:50px 44px; }
+  .contact-col.form-col{ border-right:1px solid var(--line); }
+  .field{ margin-bottom:20px; }
+  .field label{ font-family:var(--sans); font-size:13px; font-weight:600; color:var(--navy); display:block; margin-bottom:7px; }
+  .field input, .field textarea{
+    width:100%; border:1.3px solid var(--line-strong); border-radius:3px; padding:11px 13px; font-family:var(--sans);
+    font-size:14px; color:var(--ink); outline:none; background:#fff;
+  }
+  .field input:focus, .field textarea:focus{ border-color:var(--bluegreen); }
+  .field textarea{ resize:vertical; min-height:96px; }
+  .form-note{ font-size:12.5px; color:var(--muted); margin-top:18px; font-family:var(--sans); }
+  .contact-item{ display:flex; gap:14px; margin-bottom:28px; align-items:flex-start; }
+  .contact-item i{ font-size:20px; color:var(--tiger); margin-top:3px; }
+  .contact-item h4{ font-family:var(--sans); font-size:15px; font-weight:600; color:var(--navy); }
+  .contact-item p{ color:var(--muted); font-size:14px; margin-top:4px; font-family:var(--sans); }
+  .contact-item a{ color:var(--bluegreen); text-decoration:none; font-family:var(--sans); font-weight:500; }
+  .chat-hint{
+    margin-top:36px; padding:20px; border:1.3px dashed var(--line-strong); border-radius:4px;
+    display:flex; gap:14px; align-items:flex-start;
+  }
+  .chat-hint i{ font-size:22px; color:var(--bluegreen); }
+  .chat-hint p{ font-size:13.5px; color:var(--muted); font-family:var(--sans); margin-top:4px; }
+  @media (max-width:760px){ .contact-grid{ grid-template-columns:1fr; } .contact-col.form-col{ border-right:none; border-bottom:1px solid var(--line); } }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" class="brand" aria-label="Nexo SAS, inicio">
+      <svg viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="24" y1="68" x2="64" y2="28" stroke="#023047" stroke-width="2" stroke-opacity="0.25"/>
+        <rect x="10" y="54" width="28" height="28" rx="6" fill="#8ecae6" stroke="#219ebc" stroke-width="1.5"/>
+        <rect x="30" y="34" width="28" height="28" rx="6" fill="#219ebc"/>
+        <rect x="50" y="14" width="28" height="28" rx="6" fill="#023047"/>
+      </svg>
+      <span class="brand-word">NEXO<span>SAS</span></span>
+    </a>
+    <div class="nav-right">
+      <nav class="main-nav" id="mainNav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="equipo.html">Equipo</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+      <a href="contacto.html" class="cta-btn">Agendar conversación</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav"><i class="ti ti-menu-2"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Contacto</p>
+    <h1>Agendemos una conversación</h1>
+    <p class="lead">Cuéntanos sobre tu institución y te contactamos para coordinar una llamada de 30 minutos — sin compromiso.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="contact-grid">
+    <div class="contact-col form-col">
+      <form id="contact-form">
+        <div class="field">
+          <label for="name">Nombre completo</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="institucion">Institución educativa</label>
+          <input type="text" id="institucion" name="institucion" required>
+        </div>
+        <div class="field">
+          <label for="fecha">Disponibilidad preferida</label>
+          <input type="text" id="fecha" name="fecha" placeholder="Ej. martes en la tarde">
+        </div>
+        <div class="field">
+          <label for="motivo">¿Qué te gustaría revisar?</label>
+          <textarea id="motivo" name="motivo" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary"><i class="ti ti-send"></i> Enviar solicitud</button>
+        <p class="form-note">Al enviar, se abrirá tu cliente de correo con la solicitud lista para confirmar el envío a contacto@nexosas.com.</p>
+      </form>
+    </div>
+    <div class="contact-col">
+      <div class="contact-item">
+        <i class="ti ti-mail"></i>
+        <div><h4>Correo</h4><p><a href="mailto:contacto@nexosas.com">contacto@nexosas.com</a></p></div>
+      </div>
+      <div class="contact-item">
+        <i class="ti ti-map-pin"></i>
+        <div><h4>Ubicación</h4><p>Medellín / Rionegro, Antioquia, Colombia</p></div>
+      </div>
+      <div class="contact-item">
+        <i class="ti ti-clock"></i>
+        <div><h4>Tiempo de respuesta</h4><p>Normalmente respondemos en 1 a 2 días hábiles</p></div>
+      </div>
+      <div class="chat-hint">
+        <i class="ti ti-message-chatbot"></i>
+        <div>
+          <h4 style="font-family:var(--sans); font-size:14.5px; font-weight:600; color:var(--navy);">¿Prefieres resolverlo ya mismo?</h4>
+          <p>Usa el asistente virtual en la esquina inferior derecha — puede responder preguntas frecuentes y agendar la cita por ti, sin salir de la página.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site" style="margin-top:60px;">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px" aria-hidden="true">
+            <rect x="10" y="54" width="28" height="28" rx="6" fill="#8ecae6"/><rect x="30" y="34" width="28" height="28" rx="6" fill="#219ebc"/><rect x="50" y="14" width="28" height="28" rx="6" fill="#fb8500"/>
+          </svg>
+          <span class="brand-word">NEXO<span>SAS</span></span>
+        </div>
+        <p class="footer-tag">Consultoría educativa para la transición y el sostenimiento de una cultura digital.</p>
+      </div>
+      <div class="footer-cta">
+        <a href="mailto:contacto@nexosas.com"><i class="ti ti-mail"></i> contacto@nexosas.com</a>
+        <a href="index.html"><i class="ti ti-home"></i> Volver al inicio</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nexo SAS</p>
+      <div class="footer-principles"><span>Sistémico</span><span>·</span><span>Sistematizado</span><span>·</span><span>Sistemático</span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/nav.js"></script>
+<script src="assets/chatbot.js"></script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const institucion = document.getElementById('institucion').value;
+    const fecha = document.getElementById('fecha').value || "Por definir";
+    const motivo = document.getElementById('motivo').value;
+
+    try{
+      const log = JSON.parse(localStorage.getItem('nexo_appointment_requests') || '[]');
+      log.push({ name, email, institucion, fecha, motivo, creado: new Date().toISOString() });
+      localStorage.setItem('nexo_appointment_requests', JSON.stringify(log));
+    }catch(err){}
+
+    const subject = encodeURIComponent("Solicitud de cita - Nexo SAS");
+    const body = encodeURIComponent(
+      "Nombre: " + name + "\n" + "Correo: " + email + "\n" +
+      "Institución: " + institucion + "\n" + "Disponibilidad: " + fecha + "\n" + "Motivo: " + motivo
+    );
+    window.location.href = "mailto:contacto@nexosas.com?subject=" + subject + "&body=" + body;
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios — Nexo SAS</title>
+<meta name="description" content="Desarrollo de software educativo, asesoría en gestión de procesos educativos y asesoría en talento humano, a detalle.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.44.0/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .arch-wrap{ margin:8px 0 56px; }
+  .arch-legend{ display:flex; gap:26px; flex-wrap:wrap; margin-top:14px; }
+  .arch-legend span{ font-family:var(--mono); font-size:11.5px; color:var(--ondark-muted); display:flex; align-items:center; gap:8px; }
+  .arch-legend .sw{ width:10px; height:10px; border-radius:2px; }
+  .item-row .tag-row{ display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" class="brand" aria-label="Nexo SAS, inicio">
+      <svg viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="24" y1="68" x2="64" y2="28" stroke="#023047" stroke-width="2" stroke-opacity="0.25"/>
+        <rect x="10" y="54" width="28" height="28" rx="6" fill="#8ecae6" stroke="#219ebc" stroke-width="1.5"/>
+        <rect x="30" y="34" width="28" height="28" rx="6" fill="#219ebc"/>
+        <rect x="50" y="14" width="28" height="28" rx="6" fill="#023047"/>
+      </svg>
+      <span class="brand-word">NEXO<span>SAS</span></span>
+    </a>
+    <div class="nav-right">
+      <nav class="main-nav" id="mainNav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+          <li><a href="equipo.html">Equipo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <a href="contacto.html" class="cta-btn">Agendar conversación</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav"><i class="ti ti-menu-2"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Servicios</p>
+    <h1>Todo lo que hacemos, a detalle</h1>
+    <p class="lead">Tres frentes que funcionan como un mismo sistema: el software que usa tu institución día a día, la asesoría que ordena sus procesos, y la asesoría que gestiona a su equipo humano con los mismos datos.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <nav class="dossier-index reveal" aria-label="Índice de servicios">
+    <a href="#software"><span class="num">01</span><span class="title">Desarrollo de software</span><span class="arrow">→</span></a>
+    <a href="#procesos"><span class="num">02</span><span class="title">Asesoría en gestión de procesos educativos</span><span class="arrow">→</span></a>
+    <a href="#talento"><span class="num">03</span><span class="title">Asesoría en talento humano</span><span class="arrow">→</span></a>
+  </nav>
+</section>
+
+<!-- 01 SOFTWARE -->
+<section class="service-section on-dark" id="software">
+  <div class="wrap">
+    <div class="service-head reveal">
+      <span class="num">01</span>
+      <div>
+        <p class="eyebrow on-dark">Desarrollo de software</p>
+        <h2>Un ecosistema de herramientas, respaldado por un asistente de IA</h2>
+        <p>Cada módulo funciona por separado, pero todos alimentan al mismo asistente — el que analiza los datos que ya produce tu institución y el que puedes convertir en chatbot para tu comunidad educativa.</p>
+      </div>
+    </div>
+
+    <div class="arch-wrap">
+      <svg viewBox="0 0 700 600" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%; height:auto;">
+        <title>Arquitectura de software Nexo</title>
+        <g stroke-width="1.6" fill="none">
+          <path d="M350,300 L350,90" stroke="#3a7f96" />
+          <path d="M350,300 L514,169" stroke="#3a7f96" />
+          <path d="M350,300 L555,347" stroke="#3a7f96" />
+          <path d="M350,300 L441,489" stroke="#3a7f96" />
+          <path d="M350,300 L259,489" stroke="#3a7f96" />
+          <path d="M350,300 L145,347" stroke="#c98a2e" stroke-dasharray="3 4"/>
+          <path d="M350,300 L186,169" stroke="#c98a2e" stroke-dasharray="3 4"/>
+        </g>
+        <g font-family="IBM Plex Sans, Arial, sans-serif">
+          <circle cx="350" cy="90" r="50" fill="#0e4a63" stroke="#219ebc" stroke-width="1.5"/>
+          <text x="350" y="94" text-anchor="middle" font-size="13" fill="#eaf6fa">Calificaciones</text>
+          <circle cx="514" cy="169" r="50" fill="#0e4a63" stroke="#219ebc" stroke-width="1.5"/>
+          <text x="514" y="173" text-anchor="middle" font-size="13" fill="#eaf6fa">Asistencia</text>
+          <circle cx="555" cy="347" r="52" fill="#0e4a63" stroke="#219ebc" stroke-width="1.5"/>
+          <text x="555" y="343" text-anchor="middle" font-size="12.5" fill="#eaf6fa">Planeación</text>
+          <text x="555" y="359" text-anchor="middle" font-size="12.5" fill="#eaf6fa">con IA</text>
+          <circle cx="441" cy="489" r="52" fill="#0e4a63" stroke="#219ebc" stroke-width="1.5"/>
+          <text x="441" y="485" text-anchor="middle" font-size="12" fill="#eaf6fa">LMS personalizado</text>
+          <text x="441" y="500" text-anchor="middle" font-size="12" fill="#eaf6fa">con IA</text>
+          <circle cx="259" cy="489" r="55" fill="#0e4a63" stroke="#219ebc" stroke-width="1.5"/>
+          <text x="259" y="480" text-anchor="middle" font-size="12" fill="#eaf6fa">Gestión</text>
+          <text x="259" y="495" text-anchor="middle" font-size="12" fill="#eaf6fa">administrativa</text>
+          <text x="259" y="510" text-anchor="middle" font-size="10.5" fill="#a9c7d4">inventarios · talento humano</text>
+          <circle cx="145" cy="347" r="50" fill="#5a3a12" stroke="#ffb703" stroke-width="1.5"/>
+          <text x="145" y="343" text-anchor="middle" font-size="12" fill="#fff3da">Análisis</text>
+          <text x="145" y="359" text-anchor="middle" font-size="12" fill="#fff3da">de datos</text>
+          <circle cx="186" cy="169" r="50" fill="#5a3a12" stroke="#ffb703" stroke-width="1.5"/>
+          <text x="186" y="165" text-anchor="middle" font-size="12" fill="#fff3da">Chatbots</text>
+          <text x="186" y="181" text-anchor="middle" font-size="12" fill="#fff3da">institucionales</text>
+          <circle cx="350" cy="300" r="66" fill="#fb8500" stroke="#023047" stroke-width="2"/>
+          <text x="350" y="296" text-anchor="middle" font-size="14.5" font-weight="600" fill="#023047">Asistente</text>
+          <text x="350" y="313" text-anchor="middle" font-size="14.5" font-weight="600" fill="#023047">de IA</text>
+        </g>
+      </svg>
+      <div class="arch-legend">
+        <span><span class="sw" style="background:#219ebc"></span>Módulos de gestión escolar</span>
+        <span><span class="sw" style="background:#ffb703"></span>Capacidades del asistente de IA</span>
+      </div>
+    </div>
+
+    <div class="item-row-panel">
+      <div class="item-row">
+        <div>
+          <h3>Calificaciones</h3>
+          <span class="tag">Módulo académico</span>
+        </div>
+        <div>
+          <p class="desc">Registro y seguimiento académico digital, con boletines que se generan solos y un histórico completo por estudiante.</p>
+          <ul>
+            <li><i class="ti ti-check"></i> Boletines automáticos por periodo</li>
+            <li><i class="ti ti-check"></i> Histórico académico por estudiante</li>
+            <li><i class="ti ti-check"></i> Acceso para acudientes en tiempo real</li>
+            <li><i class="ti ti-check"></i> Integración directa con el módulo de asistencia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item-row">
+        <div>
+          <h3>Asistencia</h3>
+          <span class="tag">Módulo académico</span>
+        </div>
+        <div>
+          <p class="desc">Control diario de asistencia que alimenta directamente al asistente de IA para detectar patrones de inasistencia.</p>
+          <ul>
+            <li><i class="ti ti-check"></i> Registro por aplicación o código QR</li>
+            <li><i class="ti ti-check"></i> Alertas automáticas de inasistencia</li>
+            <li><i class="ti ti-check"></i> Reportes por grado, curso o sede</li>
+            <li><i class="ti ti-check"></i> Datos listos para análisis del asistente de IA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item-row">
+        <div>
+          <h3>Asistente de planeación con IA</h3>
+          <span class="tag">Herramienta docente</span>
+        </div>
+        <div>
+          <p class="desc">Apoya a los docentes en la estructura de sus planes de clase, sin reemplazar su criterio pedagógico.</p>
+          <ul>
+            <li><i class="ti ti-check"></i> Generación asistida de planes de clase</li>
+            <li><i class="ti ti-check"></i> Alineación a estándares curriculares</li>
+            <li><i class="ti ti-check"></i> Banco de planeaciones reutilizable</li>
+            <li><i class="ti ti-check"></i> Ajustes a partir de la retroalimentación docente</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item-row">
+        <div>
+          <h3>LMS personalizado con IA</h3>
+          <span class="tag">Plataforma de aprendizaje</span>
+        </div>
+        <div>
+          <p class="desc">Un LMS con la identidad de tu institución, no una plantilla genérica reetiquetada.</p>
+          <ul>
+            <li><i class="ti ti-check"></i> Identidad visual propia de la institución</li>
+            <li><i class="ti ti-check"></i> Contenidos y rutas de aprendizaje adaptativas</li>
+            <li><i class="ti ti-check"></i> Seguimiento de progreso por estudiante</li>
+            <li><i class="ti ti-check"></i> Integración con calificaciones y asistencia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item-row">
+        <div>
+          <h3>Gestión administrativa</h3>
+          <span class="tag">Inventarios · talento humano</span>
+        </div>
+        <div>
+          <p class="desc">Dos operaciones que casi siempre se llevan en hojas sueltas, unificadas en un solo lugar.</p>
+          <ul>
+            <li><i class="ti ti-check"></i> Control de inventario y activos institucionales</li>
+            <li><i class="ti ti-check"></i> Alertas de mantenimiento y bajas</li>
+            <li><i class="ti ti-check"></i> Asignación de carga docente</li>
+            <li><i class="ti ti-check"></i> Control y reporte de ausentismo del personal</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item-row">
+        <div>
+          <h3>Asistente de IA transversal</h3>
+          <span class="tag">Análisis · chatbots</span>
+        </div>
+        <div>
+          <p class="desc">El componente que conecta todos los módulos anteriores y los convierte en decisiones.</p>
+          <ul>
+            <li><i class="ti ti-check"></i> Análisis cruzado de datos entre todos los módulos</li>
+            <li><i class="ti ti-check"></i> Tableros de indicadores para rectoría</li>
+            <li><i class="ti ti-check"></i> Creación de chatbots para estudiantes, familias o docentes</li>
+            <li><i class="ti ti-check"></i> Respuestas basadas en la información real de tu institución</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 PROCESOS -->
+<section class="service-section" id="procesos">
+  <div class="wrap">
+    <div class="service-head reveal">
+      <span class="num">02</span>
+      <div>
+        <p class="eyebrow">Asesoría en gestión de procesos educativos</p>
+        <h2>De "así lo hemos hecho siempre" a procesos documentados y medibles</h2>
+        <p>Llevamos la operación de tu institución a procesos que se pueden repetir, auditar y mejorar — sin depender de la memoria de una sola persona.</p>
+      </div>
+    </div>
+
+    <div class="item-row">
+      <div><span class="row-icon"><i class="ti ti-clipboard-search"></i></span><h3>Diagnóstico institucional de procesos</h3><span class="tag">Punto de partida</span></div>
+      <div><p class="desc">Levantamos cómo funciona hoy cada área de la institución, identificando cuellos de botella y procesos que dependen de una sola persona.</p></div>
+    </div>
+    <div class="item-row">
+      <div><span class="row-icon"><i class="ti ti-chart-bar"></i></span><h3>Análisis de encuestas y evaluaciones institucionales</h3><span class="tag">Datos</span></div>
+      <div><p class="desc">Procesamos los resultados de encuestas de clima, satisfacción o percepción, y los traducimos en informes claros para la toma de decisiones.</p></div>
+    </div>
+    <div class="item-row">
+      <div><span class="row-icon"><i class="ti ti-calendar-time"></i></span><h3>Reorganización de horarios y cargas académicas</h3><span class="tag">Operación</span></div>
+      <div><p class="desc">Resolvemos los cruces de horario y cargas docentes que normalmente se arman a mano, detectando conflictos antes de que ocurran.</p></div>
+    </div>
+    <div class="item-row">
+      <div><span class="row-icon"><i class="ti ti-report-analytics"></i></span><h3>Indicadores y reportes de calidad para rectoría</h3><span class="tag">Reportería</span></div>
+      <div><p class="desc">Convertimos la información dispersa en tableros e informes que rectoría y junta directiva pueden usar directamente.</p></div>
+    </div>
+    <div class="item-row" style="border-bottom:1px solid var(--line);">
+      <div><span class="row-icon"><i class="ti ti-certificate"></i></span><h3>Acompañamiento en procesos de certificación de calidad</h3><span class="tag">Continuidad</span></div>
+      <div><p class="desc">Apoyamos la documentación y sostenimiento de los procesos que exige un proceso de certificación o acreditación institucional.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 TALENTO -->
+<section class="service-section" id="talento">
+  <div class="wrap">
+    <div class="service-head reveal">
+      <span class="num">03</span>
+      <div>
+        <p class="eyebrow">Asesoría en talento humano</p>
+        <h2>El talento humano también se puede sistematizar</h2>
+        <p>El equipo docente y administrativo de una institución educativa es un proceso más — no solo algo que se administra cuando surge un problema.</p>
+      </div>
+    </div>
+
+    <div class="item-row">
+      <div><span class="row-icon"><i class="ti ti-briefcase"></i></span><h3>Asignación de carga docente basada en datos</h3><span class="tag">Planeación</span></div>
+      <div><p class="desc">Distribuimos la carga académica considerando perfil, disponibilidad y carga histórica de cada docente, no solo la casilla vacía en el horario.</p></div>
+    </div>
+    <div class="item-row">
+      <div><span class="row-icon"><i class="ti ti-calendar-off"></i></span><h3>Seguimiento y control de ausentismo</h3><span class="tag">Seguimiento</span></div>
+      <div><p class="desc">Identificamos patrones de ausentismo del personal antes de que se conviertan en un problema operativo recurrente.</p></div>
+    </div>
+    <div class="item-row">
+      <div><span class="row-icon"><i class="ti ti-heart-rate-monitor"></i></span><h3>Indicadores de bienestar y rotación</h3><span class="tag">Datos</span></div>
+      <div><p class="desc">Medimos señales tempranas de rotación y bienestar del equipo, para que las decisiones no lleguen solo cuando alguien ya renunció.</p></div>
+    </div>
+    <div class="item-row">
+      <div><span class="row-icon"><i class="ti ti-user-search"></i></span><h3>Selección y perfilamiento docente</h3><span class="tag">Vinculación</span></div>
+      <div><p class="desc">Acompañamos procesos de selección con criterios claros y alineados al proyecto educativo institucional.</p></div>
+    </div>
+    <div class="item-row" style="border-bottom:1px solid var(--line);">
+      <div><span class="row-icon"><i class="ti ti-school"></i></span><h3>Planes de desarrollo y capacitación docente</h3><span class="tag">Crecimiento</span></div>
+      <div><p class="desc">Diseñamos rutas de formación continua a partir de las brechas reales que muestran los datos del equipo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap" style="justify-content:center; text-align:center; flex-direction:column; align-items:center;">
+    <h2>¿Con cuál de los tres frentes empezamos?</h2>
+    <p style="margin-bottom:26px;">Cuéntanos tu contexto y te ayudamos a priorizar — no todas las instituciones necesitan los tres al mismo tiempo.</p>
+    <a href="contacto.html" class="btn-primary"><i class="ti ti-calendar-event"></i> Agendar una cita</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px" aria-hidden="true">
+            <rect x="10" y="54" width="28" height="28" rx="6" fill="#8ecae6"/><rect x="30" y="34" width="28" height="28" rx="6" fill="#219ebc"/><rect x="50" y="14" width="28" height="28" rx="6" fill="#fb8500"/>
+          </svg>
+          <span class="brand-word">NEXO<span>SAS</span></span>
+        </div>
+        <p class="footer-tag">Consultoría educativa para la transición y el sostenimiento de una cultura digital.</p>
+      </div>
+      <div class="footer-cta">
+        <a href="mailto:contacto@nexosas.com"><i class="ti ti-mail"></i> contacto@nexosas.com</a>
+        <a href="contacto.html"><i class="ti ti-calendar-event"></i> Agendar una cita</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nexo SAS</p>
+      <div class="footer-principles"><span>Sistémico</span><span>·</span><span>Sistematizado</span><span>·</span><span>Sistemático</span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/nav.js"></script>
+<script src="assets/chatbot.js"></script>
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:0.15});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
