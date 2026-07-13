@@ -32,6 +32,7 @@
   .eco-card{
     background:var(--panel-dark); border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:20px;
     display:flex; flex-direction:column; gap:12px; transition:transform 0.2s ease, border-color 0.2s ease;
+    text-decoration:none; cursor:pointer;
   }
   .eco-card:hover{ transform:translateY(-3px); border-color:var(--bluegreen); }
   .eco-card.accent{ border-color:rgba(255,183,3,0.3); }
@@ -112,19 +113,19 @@
         <img class="eco-hub-photo" src="assets/img/software-screen.jpg" alt="Pantalla de análisis de datos y código" loading="lazy">
       </div>
       <div class="eco-modules">
-        <div class="eco-card"><span class="eco-icon"><i class="ti ti-report"></i></span><h4>Calificaciones</h4></div>
-        <div class="eco-card"><span class="eco-icon"><i class="ti ti-clipboard-check"></i></span><h4>Asistencia</h4></div>
-        <div class="eco-card"><span class="eco-icon"><i class="ti ti-bulb"></i></span><h4>Planeación con IA</h4></div>
-        <div class="eco-card"><span class="eco-icon"><i class="ti ti-school"></i></span><h4>LMS personalizado con IA</h4></div>
-        <div class="eco-card"><span class="eco-icon"><i class="ti ti-building-community"></i></span><h4>Gestión administrativa</h4></div>
-        <div class="eco-card accent"><span class="eco-icon"><i class="ti ti-chart-dots"></i></span><h4>Análisis de datos</h4></div>
-        <div class="eco-card accent"><span class="eco-icon"><i class="ti ti-message-chatbot"></i></span><h4>Chatbots institucionales</h4></div>
+        <a href="#feat-calificaciones" class="eco-card"><span class="eco-icon"><i class="ti ti-report"></i></span><h4>Calificaciones</h4></a>
+        <a href="#feat-asistencia" class="eco-card"><span class="eco-icon"><i class="ti ti-clipboard-check"></i></span><h4>Asistencia</h4></a>
+        <a href="#feat-planeacion" class="eco-card"><span class="eco-icon"><i class="ti ti-bulb"></i></span><h4>Planeación con IA</h4></a>
+        <a href="#feat-lms" class="eco-card"><span class="eco-icon"><i class="ti ti-school"></i></span><h4>LMS personalizado con IA</h4></a>
+        <a href="#feat-gestion" class="eco-card"><span class="eco-icon"><i class="ti ti-building-community"></i></span><h4>Gestión administrativa</h4></a>
+        <a href="#feat-ia-transversal" class="eco-card accent"><span class="eco-icon"><i class="ti ti-chart-dots"></i></span><h4>Análisis de datos</h4></a>
+        <a href="#feat-ia-transversal" class="eco-card accent"><span class="eco-icon"><i class="ti ti-message-chatbot"></i></span><h4>Chatbots institucionales</h4></a>
       </div>
     </div>
-    <p class="eco-caption"><span class="sw"></span>Los recuadros en ámbar son capacidades exclusivas del asistente de IA</p>
+    <p class="eco-caption"><span class="sw"></span>Los recuadros en ámbar son capacidades exclusivas del asistente de IA — toca una tarjeta para ver el detalle</p>
 
     <div class="item-row-panel">
-      <div class="item-row">
+      <div class="item-row" id="feat-calificaciones">
         <div>
           <h3>Calificaciones</h3>
           <span class="tag">Módulo académico</span>
@@ -139,7 +140,7 @@
           </ul>
         </div>
       </div>
-      <div class="item-row">
+      <div class="item-row" id="feat-asistencia">
         <div>
           <h3>Asistencia</h3>
           <span class="tag">Módulo académico</span>
@@ -154,7 +155,7 @@
           </ul>
         </div>
       </div>
-      <div class="item-row">
+      <div class="item-row" id="feat-planeacion">
         <div>
           <h3>Asistente de planeación con IA</h3>
           <span class="tag">Herramienta docente</span>
@@ -169,7 +170,7 @@
           </ul>
         </div>
       </div>
-      <div class="item-row">
+      <div class="item-row" id="feat-lms">
         <div>
           <h3>LMS personalizado con IA</h3>
           <span class="tag">Plataforma de aprendizaje</span>
@@ -184,7 +185,7 @@
           </ul>
         </div>
       </div>
-      <div class="item-row">
+      <div class="item-row" id="feat-gestion">
         <div>
           <h3>Gestión administrativa</h3>
           <span class="tag">Inventarios · talento humano</span>
@@ -199,7 +200,7 @@
           </ul>
         </div>
       </div>
-      <div class="item-row">
+      <div class="item-row" id="feat-ia-transversal">
         <div>
           <h3>Asistente de IA transversal</h3>
           <span class="tag">Análisis · chatbots</span>
@@ -326,6 +327,15 @@
   const els = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:0.15});
   els.forEach(el=>io.observe(el));
+
+  document.querySelectorAll('.eco-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const target = document.querySelector(card.getAttribute('href'));
+      if (!target) return;
+      target.classList.add('flash-highlight');
+      setTimeout(() => target.classList.remove('flash-highlight'), 1400);
+    });
+  });
 </script>
 </body>
 </html>
