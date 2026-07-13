@@ -30,7 +30,7 @@
     background:linear-gradient(135deg, var(--sky), var(--bluegreen)); z-index:0;
   }
   .hero-photo{
-    position:relative; z-index:1; width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:16px;
+    position:relative; z-index:1; display:block; width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:16px;
     box-shadow:0 30px 60px -20px rgba(2,48,71,0.4);
   }
 
@@ -59,7 +59,15 @@
 
   .cta-band h2{ max-width:20ch; }
 
-  @media (max-width:880px){ .hero-grid{ grid-template-columns:1fr; } .hero-visual{ order:-1; max-width:320px; margin:0 auto 28px; } }
+  @media (max-width:880px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-visual{ order:-1; max-width:360px; margin:0 auto 24px; }
+    .hero-photo{ aspect-ratio:16/11; }
+    .hero-visual::before{ width:60%; height:50%; }
+  }
+  @media (max-width:420px){
+    .hero-visual{ max-width:280px; }
+  }
 </style>
 </head>
 <body>
@@ -107,7 +115,10 @@
       </div>
     </div>
     <div class="hero-visual">
-      <img class="hero-photo" src="assets/img/hero-classroom.jpg" alt="Docente usando su computador en un salón de clase" width="800" height="1000">
+      <img class="hero-photo" src="assets/img/hero-classroom.jpg"
+        srcset="assets/img/hero-classroom-sm.jpg 500w, assets/img/hero-classroom.jpg 1000w"
+        sizes="(max-width:880px) 320px, 480px"
+        alt="Docente usando su computador en un salón de clase" loading="eager">
     </div>
   </div>
 </section>
