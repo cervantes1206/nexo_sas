@@ -12,9 +12,15 @@
 <link rel="stylesheet" href="assets/styles.css">
 <style>
   .approach{ padding:76px 0; border-bottom:1px solid var(--line); }
-  .approach .head{ max-width:640px; margin-bottom:12px; }
+  .approach-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:52px; align-items:center; }
+  .approach .head{ max-width:560px; margin-bottom:12px; }
   .approach h2{ font-size:clamp(24px,3vw,30px); margin-top:14px; }
   .approach p{ color:var(--muted); font-size:16px; margin-top:14px; font-family:var(--sans); max-width:62ch; }
+  .approach-photo img{
+    width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:14px;
+    box-shadow:0 26px 50px -18px rgba(2,48,71,0.3);
+  }
+  @media (max-width:880px){ .approach-grid{ grid-template-columns:1fr; } .approach-photo{ order:-1; } }
 </style>
 </head>
 <body>
@@ -85,11 +91,14 @@
 </section>
 
 <section class="approach">
-  <div class="wrap">
+  <div class="wrap approach-grid">
     <div class="head reveal">
       <p class="eyebrow">Cómo trabajamos</p>
       <h2>La mirada institucional y la mirada técnica, en la misma mesa</h2>
       <p>La mayoría de los proyectos de tecnología educativa fallan porque se diseñan desde un solo lado: o entienden el colegio pero no saben construir software, o construyen software sin entender cómo se gestiona una institución educativa. Nexo existe precisamente para cerrar esa distancia — cada herramienta pasa por ambas miradas antes de llegar a producción.</p>
+    </div>
+    <div class="approach-photo reveal">
+      <img src="assets/img/team-collaboration.jpg" alt="Dos profesionales revisando información juntos en pantalla" width="700" height="525">
     </div>
   </div>
 </section>

@@ -11,11 +11,41 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.44.0/tabler-icons.min.css">
 <link rel="stylesheet" href="assets/styles.css">
 <style>
-  .arch-wrap{ margin:8px 0 56px; }
-  .arch-legend{ display:flex; gap:26px; flex-wrap:wrap; margin-top:14px; }
-  .arch-legend span{ font-family:var(--mono); font-size:11.5px; color:var(--ondark-muted); display:flex; align-items:center; gap:8px; }
-  .arch-legend .sw{ width:10px; height:10px; border-radius:2px; }
   .item-row .tag-row{ display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+
+  .eco-wrap{ margin:8px 0 56px; display:grid; grid-template-columns:300px 1fr; gap:22px; align-items:start; }
+  .eco-hub{
+    background:linear-gradient(160deg, var(--tiger), #c96a00); border-radius:14px; padding:30px 26px;
+    color:#fff; display:flex; flex-direction:column; gap:12px;
+  }
+  .eco-hub-icon{
+    width:46px; height:46px; border-radius:10px; background:rgba(255,255,255,0.2);
+    display:flex; align-items:center; justify-content:center; font-size:22px;
+  }
+  .eco-hub h3{ color:#fff; font-size:21px; font-family:var(--sans); font-weight:600; }
+  .eco-hub p{ color:rgba(255,255,255,0.88); font-size:13.5px; font-family:var(--sans); }
+  .eco-hub-photo{
+    width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:10px; margin-top:4px;
+    box-shadow:0 16px 28px -14px rgba(0,0,0,0.55);
+  }
+  .eco-modules{ display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; align-content:start; }
+  .eco-card{
+    background:var(--panel-dark); border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:20px;
+    display:flex; flex-direction:column; gap:12px; transition:transform 0.2s ease, border-color 0.2s ease;
+  }
+  .eco-card:hover{ transform:translateY(-3px); border-color:var(--bluegreen); }
+  .eco-card.accent{ border-color:rgba(255,183,3,0.3); }
+  .eco-card.accent:hover{ border-color:var(--amber); }
+  .eco-icon{
+    width:36px; height:36px; border-radius:8px; background:rgba(255,255,255,0.08); color:var(--sky);
+    display:flex; align-items:center; justify-content:center; font-size:17px;
+  }
+  .eco-card.accent .eco-icon{ color:var(--amber); background:rgba(255,183,3,0.12); }
+  .eco-card h4{ font-family:var(--sans); font-size:14.5px; font-weight:600; color:#fff; }
+  .eco-caption{ font-family:var(--mono); font-size:11.5px; color:var(--ondark-muted); margin-top:14px; display:flex; align-items:center; gap:8px; }
+  .eco-caption .sw{ width:9px; height:9px; border-radius:2px; background:var(--amber); display:inline-block; }
+  @media (max-width:880px){ .eco-wrap{ grid-template-columns:1fr; } .eco-modules{ grid-template-columns:repeat(2, 1fr); } }
+  @media (max-width:480px){ .eco-modules{ grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -74,49 +104,24 @@
       </div>
     </div>
 
-    <div class="arch-wrap">
-      <svg viewBox="0 0 700 600" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%; height:auto;">
-        <title>Arquitectura de software Nexo</title>
-        <g stroke-width="1.6" fill="none">
-          <path d="M350,300 L350,90" stroke="#3a7f96" />
-          <path d="M350,300 L514,169" stroke="#3a7f96" />
-          <path d="M350,300 L555,347" stroke="#3a7f96" />
-          <path d="M350,300 L441,489" stroke="#3a7f96" />
-          <path d="M350,300 L259,489" stroke="#3a7f96" />
-          <path d="M350,300 L145,347" stroke="#c98a2e" stroke-dasharray="3 4"/>
-          <path d="M350,300 L186,169" stroke="#c98a2e" stroke-dasharray="3 4"/>
-        </g>
-        <g font-family="IBM Plex Sans, Arial, sans-serif">
-          <circle cx="350" cy="90" r="50" fill="#0e4a63" stroke="#219ebc" stroke-width="1.5"/>
-          <text x="350" y="94" text-anchor="middle" font-size="13" fill="#eaf6fa">Calificaciones</text>
-          <circle cx="514" cy="169" r="50" fill="#0e4a63" stroke="#219ebc" stroke-width="1.5"/>
-          <text x="514" y="173" text-anchor="middle" font-size="13" fill="#eaf6fa">Asistencia</text>
-          <circle cx="555" cy="347" r="52" fill="#0e4a63" stroke="#219ebc" stroke-width="1.5"/>
-          <text x="555" y="343" text-anchor="middle" font-size="12.5" fill="#eaf6fa">Planeación</text>
-          <text x="555" y="359" text-anchor="middle" font-size="12.5" fill="#eaf6fa">con IA</text>
-          <circle cx="441" cy="489" r="52" fill="#0e4a63" stroke="#219ebc" stroke-width="1.5"/>
-          <text x="441" y="485" text-anchor="middle" font-size="12" fill="#eaf6fa">LMS personalizado</text>
-          <text x="441" y="500" text-anchor="middle" font-size="12" fill="#eaf6fa">con IA</text>
-          <circle cx="259" cy="489" r="55" fill="#0e4a63" stroke="#219ebc" stroke-width="1.5"/>
-          <text x="259" y="480" text-anchor="middle" font-size="12" fill="#eaf6fa">Gestión</text>
-          <text x="259" y="495" text-anchor="middle" font-size="12" fill="#eaf6fa">administrativa</text>
-          <text x="259" y="510" text-anchor="middle" font-size="10.5" fill="#a9c7d4">inventarios · talento humano</text>
-          <circle cx="145" cy="347" r="50" fill="#5a3a12" stroke="#ffb703" stroke-width="1.5"/>
-          <text x="145" y="343" text-anchor="middle" font-size="12" fill="#fff3da">Análisis</text>
-          <text x="145" y="359" text-anchor="middle" font-size="12" fill="#fff3da">de datos</text>
-          <circle cx="186" cy="169" r="50" fill="#5a3a12" stroke="#ffb703" stroke-width="1.5"/>
-          <text x="186" y="165" text-anchor="middle" font-size="12" fill="#fff3da">Chatbots</text>
-          <text x="186" y="181" text-anchor="middle" font-size="12" fill="#fff3da">institucionales</text>
-          <circle cx="350" cy="300" r="66" fill="#fb8500" stroke="#023047" stroke-width="2"/>
-          <text x="350" y="296" text-anchor="middle" font-size="14.5" font-weight="600" fill="#023047">Asistente</text>
-          <text x="350" y="313" text-anchor="middle" font-size="14.5" font-weight="600" fill="#023047">de IA</text>
-        </g>
-      </svg>
-      <div class="arch-legend">
-        <span><span class="sw" style="background:#219ebc"></span>Módulos de gestión escolar</span>
-        <span><span class="sw" style="background:#ffb703"></span>Capacidades del asistente de IA</span>
+    <div class="eco-wrap reveal">
+      <div class="eco-hub">
+        <span class="eco-hub-icon"><i class="ti ti-sparkles"></i></span>
+        <h3>Asistente de IA</h3>
+        <p>El componente central: conecta todos los módulos y convierte sus datos en decisiones.</p>
+        <img class="eco-hub-photo" src="assets/img/software-screen.jpg" alt="Pantalla de análisis de datos y código">
+      </div>
+      <div class="eco-modules">
+        <div class="eco-card"><span class="eco-icon"><i class="ti ti-report"></i></span><h4>Calificaciones</h4></div>
+        <div class="eco-card"><span class="eco-icon"><i class="ti ti-clipboard-check"></i></span><h4>Asistencia</h4></div>
+        <div class="eco-card"><span class="eco-icon"><i class="ti ti-bulb"></i></span><h4>Planeación con IA</h4></div>
+        <div class="eco-card"><span class="eco-icon"><i class="ti ti-school"></i></span><h4>LMS personalizado con IA</h4></div>
+        <div class="eco-card"><span class="eco-icon"><i class="ti ti-building-community"></i></span><h4>Gestión administrativa</h4></div>
+        <div class="eco-card accent"><span class="eco-icon"><i class="ti ti-chart-dots"></i></span><h4>Análisis de datos</h4></div>
+        <div class="eco-card accent"><span class="eco-icon"><i class="ti ti-message-chatbot"></i></span><h4>Chatbots institucionales</h4></div>
       </div>
     </div>
+    <p class="eco-caption"><span class="sw"></span>Los recuadros en ámbar son capacidades exclusivas del asistente de IA</p>
 
     <div class="item-row-panel">
       <div class="item-row">

@@ -24,11 +24,15 @@
   .principles{ display:flex; gap:22px; flex-wrap:wrap; }
   .principle{ font-family:var(--mono); font-size:12px; color:var(--navy); display:flex; align-items:center; gap:8px; }
   .principle .dot{ width:9px; height:9px; border-radius:2px; display:inline-block; }
-  .hero-visual{ position:relative; display:flex; align-items:center; justify-content:center; }
-  .hero-visual > svg:first-child{ filter:drop-shadow(0 22px 36px rgba(2,48,71,0.28)); }
-  .stair{ position:absolute; opacity:0.55; }
-  .stair.s1{ top:-6px; right:0; width:110px; transform:rotate(8deg); opacity:0.35; }
-  .stair.s2{ bottom:-18px; left:-6px; width:84px; transform:rotate(-12deg); opacity:0.28; }
+  .hero-visual{ position:relative; }
+  .hero-visual::before{
+    content:""; position:absolute; top:-18px; left:-18px; width:72%; height:60%; border-radius:18px;
+    background:linear-gradient(135deg, var(--sky), var(--bluegreen)); z-index:0;
+  }
+  .hero-photo{
+    position:relative; z-index:1; width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:16px;
+    box-shadow:0 30px 60px -20px rgba(2,48,71,0.4);
+  }
 
   .pillars{ padding:80px 0; border-bottom:1px solid var(--line); }
   .pillars .head{ max-width:640px; margin-bottom:12px; }
@@ -55,7 +59,7 @@
 
   .cta-band h2{ max-width:20ch; }
 
-  @media (max-width:880px){ .hero-grid{ grid-template-columns:1fr; } .hero-visual{ order:-1; max-width:260px; margin:0 auto 20px; } }
+  @media (max-width:880px){ .hero-grid{ grid-template-columns:1fr; } .hero-visual{ order:-1; max-width:320px; margin:0 auto 28px; } }
 </style>
 </head>
 <body>
@@ -103,18 +107,7 @@
       </div>
     </div>
     <div class="hero-visual">
-      <svg viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" style="width:220px" aria-hidden="true">
-        <line x1="24" y1="68" x2="64" y2="28" stroke="#023047" stroke-width="1.6" stroke-opacity="0.3"/>
-        <rect x="10" y="54" width="28" height="28" rx="7" fill="#8ecae6" stroke="#219ebc" stroke-width="1.5"/>
-        <rect x="30" y="34" width="28" height="28" rx="7" fill="#219ebc"/>
-        <rect x="50" y="14" width="28" height="28" rx="7" fill="#023047"/>
-      </svg>
-      <svg class="stair s1" viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="10" y="54" width="28" height="28" rx="7" fill="#ffb703"/><rect x="30" y="34" width="28" height="28" rx="7" fill="#fb8500"/><rect x="50" y="14" width="28" height="28" rx="7" fill="#023047"/>
-      </svg>
-      <svg class="stair s2" viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="10" y="54" width="28" height="28" rx="7" fill="#8ecae6"/><rect x="30" y="34" width="28" height="28" rx="7" fill="#219ebc"/><rect x="50" y="14" width="28" height="28" rx="7" fill="#023047"/>
-      </svg>
+      <img class="hero-photo" src="assets/img/hero-classroom.jpg" alt="Docente usando su computador en un salón de clase" width="800" height="1000">
     </div>
   </div>
 </section>
