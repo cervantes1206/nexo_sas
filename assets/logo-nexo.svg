@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nexoGradient" x1="20" y1="20" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="0.48" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <path d="M28 102V26M28 26L64 64M64 64L100 26M64 64L100 102M100 26V102" stroke="url(#nexoGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="28" cy="26" r="8" fill="#111827"/>
+  <circle cx="28" cy="102" r="8" fill="#111827"/>
+  <circle cx="64" cy="64" r="9" fill="#2563EB"/>
+  <circle cx="100" cy="26" r="8" fill="#38BDF8"/>
+  <circle cx="100" cy="102" r="8" fill="#2563EB"/>
+</svg>
