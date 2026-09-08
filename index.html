@@ -3,84 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexo SAS — Consultoría educativa</title>
-<meta name="description" content="Consultoría educativa para la transición y el sostenimiento de una cultura digital: desarrollo de software, asesoría en procesos educativos y asesoría en talento humano.">
+<title>NEXO SAS — Educación, procesos, datos y tecnología</title>
+<meta name="description" content="NEXO SAS conecta educación, procesos, datos, inteligencia artificial y software para convertir la operación institucional en sistemas claros, medibles y escalables.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.44.0/tabler-icons.min.css">
 <link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/brand-refresh.css">
 <style>
-  .hero{
-    padding:80px 0 84px; border-bottom:1px solid var(--line);
-    background-image: radial-gradient(circle, rgba(2,48,71,0.07) 1px, transparent 1px);
-    background-size: 22px 22px;
-  }
-  .hero-grid{ display:grid; grid-template-columns:1.15fr 0.85fr; gap:60px; align-items:center; }
-  .hero h1{ font-size:clamp(34px,4.6vw,56px); margin:18px 0 24px; }
-  .hero h1 em{ font-style:italic; color:var(--bluegreen); }
-  .hero p.lead{ font-size:18px; color:var(--muted); max-width:52ch; margin-bottom:34px; font-family:var(--sans); }
-  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:44px; }
-  .principles{ display:flex; gap:22px; flex-wrap:wrap; }
-  .principle{ font-family:var(--mono); font-size:12px; color:var(--navy); display:flex; align-items:center; gap:8px; }
-  .principle .dot{ width:9px; height:9px; border-radius:2px; display:inline-block; }
-  .hero-visual{ position:relative; }
-  .hero-visual::before{
-    content:""; position:absolute; top:-18px; left:-18px; width:72%; height:60%; border-radius:18px;
-    background:linear-gradient(135deg, var(--sky), var(--bluegreen)); z-index:0;
-  }
-  .hero-photo{
-    position:relative; z-index:1; display:block; width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:16px;
-    box-shadow:0 30px 60px -20px rgba(2,48,71,0.4);
-  }
-
-  .pillars{ padding:80px 0; border-bottom:1px solid var(--line); }
-  .pillars .head{ max-width:640px; margin-bottom:12px; }
-  .pillars h2{ font-size:clamp(26px,3.2vw,34px); margin-top:14px; }
-  .pillars .head p{ color:var(--muted); font-size:16px; margin-top:14px; font-family:var(--sans); }
-
-  .pillar-list{ margin-top:36px; }
-  .pillar{
-    position:relative; display:grid; grid-template-columns:90px 1fr 160px; gap:24px; align-items:center; padding:28px 0;
-    border-top:1px solid var(--line); text-decoration:none; transition:background 0.2s ease, padding-left 0.2s ease;
-  }
-  .pillar:last-child{ border-bottom:1px solid var(--line); }
-  .pillar::before{
-    content:""; position:absolute; left:-1px; top:8px; bottom:8px; width:3px; border-radius:2px;
-    background:var(--tiger); transform:scaleY(0); transition:transform 0.25s ease;
-  }
-  .pillar:hover{ background:#f2fafd; padding-left:8px; }
-  .pillar:hover::before{ transform:scaleY(1); }
-  .pillar .num{ font-family:var(--display); font-size:40px; color:var(--sky); }
-  .pillar h3{ font-size:21px; color:var(--navy); font-family:var(--sans); font-weight:600; }
-  .pillar p{ color:var(--muted); font-size:14.5px; margin-top:6px; font-family:var(--sans); max-width:56ch; }
-  .pillar .goto{ font-family:var(--mono); font-size:12px; color:var(--tiger); text-align:right; white-space:nowrap; }
-  @media (max-width:760px){ .pillar{ grid-template-columns:50px 1fr; } .pillar .goto{ display:none; } }
-
-  .cta-band h2{ max-width:20ch; }
-
-  @media (max-width:880px){
-    .hero-grid{ grid-template-columns:1fr; }
-    .hero-visual{ order:-1; max-width:360px; margin:0 auto 24px; }
-    .hero-photo{ aspect-ratio:16/11; }
-    .hero-visual::before{ width:60%; height:50%; }
-  }
-  @media (max-width:420px){
-    .hero-visual{ max-width:280px; }
-  }
+.hero{padding:92px 0 96px;}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:68px;align-items:center;}
+.hero h1{font-size:clamp(40px,5.8vw,70px);max-width:12ch;margin:18px 0 24px;line-height:1.02;}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:57ch;margin-bottom:34px;}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:38px;}
+.principles{display:flex;gap:20px;flex-wrap:wrap;}
+.principle{font-family:var(--mono);font-size:11px;display:flex;align-items:center;gap:8px;letter-spacing:.04em;}
+.principle .dot{width:7px;height:7px;display:inline-block;}
+.hero-visual{position:relative;}
+.hero-visual::before{content:"";position:absolute;inset:-18px 18% 22% -18px;z-index:0;}
+.hero-photo{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;box-shadow:0 28px 70px -28px rgba(15,23,42,.4);}
+.hero-badge{position:absolute;z-index:2;right:-14px;bottom:28px;background:white;border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 18px 42px rgba(15,23,42,.15);max-width:210px;}
+.hero-badge strong{display:block;color:var(--navy);font-size:13px;margin-bottom:5px;}
+.hero-badge span{font-size:12px;color:var(--muted);}
+.pillars{padding:84px 0;border-bottom:1px solid var(--line);}
+.pillars .head{display:grid;grid-template-columns:.75fr 1.25fr;gap:52px;align-items:end;margin-bottom:38px;}
+.pillars h2{font-size:clamp(30px,4vw,44px);}
+.pillars .head p{color:var(--muted);max-width:64ch;}
+.pillar-list{border-top:1px solid var(--line);}
+.pillar{position:relative;display:grid;gap:24px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:.2s ease;}
+.pillar:hover{padding-left:10px;}
+.pillar .num{font-size:13px;}
+.pillar h3{font-size:21px;}
+.pillar p{color:var(--muted);font-size:14px;margin-top:6px;max-width:62ch;}
+.pillar .goto{font-family:var(--mono);font-size:11px;color:var(--bluegreen);text-align:right;}
+.cta-band h2{max-width:18ch;}
+@media(max-width:880px){
+  .hero-grid,.pillars .head{grid-template-columns:1fr;}
+  .hero-visual{order:-1;max-width:420px;margin:auto;}
+  .hero-photo{aspect-ratio:16/11;}
+  .hero h1{max-width:none;}
+}
+@media(max-width:560px){.hero{padding-top:54px}.hero-badge{display:none}.pillar{grid-template-columns:52px 1fr!important}.pillar .goto{display:none}}
 </style>
 </head>
 <body>
 
 <header class="site">
   <div class="wrap nav">
-    <a href="index.html" class="brand" aria-label="Nexo SAS, inicio">
-      <svg viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <line x1="24" y1="68" x2="64" y2="28" stroke="#023047" stroke-width="2" stroke-opacity="0.25"/>
-        <rect x="10" y="54" width="28" height="28" rx="6" fill="#8ecae6" stroke="#219ebc" stroke-width="1.5"/>
-        <rect x="30" y="34" width="28" height="28" rx="6" fill="#219ebc"/>
-        <rect x="50" y="14" width="28" height="28" rx="6" fill="#023047"/>
-      </svg>
+    <a href="index.html" class="brand" aria-label="NEXO SAS, inicio">
+      <img src="assets/logo-nexo.svg" alt="" width="38" height="38">
       <span class="brand-word">NEXO<span>SAS</span></span>
     </a>
     <div class="nav-right">
@@ -88,6 +60,7 @@
         <ul>
           <li><a href="index.html" aria-current="page">Inicio</a></li>
           <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="#metodo">Método</a></li>
           <li><a href="equipo.html">Equipo</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
@@ -101,24 +74,28 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Consultoría educativa · tecnología y procesos</p>
-      <h1>La cultura digital de tu institución, convertida en <em>un sistema</em>.</h1>
-      <p class="lead">Diseñamos e implementamos el software y los procesos que necesita tu colegio para operar con datos, no con suposiciones — desde calificaciones y asistencia hasta un asistente de IA que analiza todo lo que ya generas.</p>
+      <p class="eyebrow">Education · Product · AI · Systems</p>
+      <h1>Conectamos lo que hoy funciona <em>por separado.</em></h1>
+      <p class="lead">Convertimos procesos, datos, conocimiento institucional y tecnología en sistemas claros, medibles y escalables. En educación, eso significa pasar de herramientas aisladas a un ecosistema digital que realmente entiende cómo funciona una institución.</p>
       <div class="hero-ctas">
-        <a href="servicios.html" class="btn-primary"><i class="ti ti-arrow-right"></i> Ver servicios en detalle</a>
-        <a href="equipo.html" class="btn-secondary">Conocer al equipo</a>
+        <a href="servicios.html" class="btn-primary"><i class="ti ti-arrow-right"></i> Explorar soluciones</a>
+        <a href="#metodo" class="btn-secondary"><i class="ti ti-route"></i> Conocer el Método NEXO</a>
       </div>
       <div class="principles">
-        <span class="principle"><span class="dot" style="background:#8ecae6"></span>Sistémico</span>
-        <span class="principle"><span class="dot" style="background:#219ebc"></span>Sistematizado</span>
-        <span class="principle"><span class="dot" style="background:#023047"></span>Sistemático</span>
+        <span class="principle"><span class="dot" style="background:#38BDF8"></span>Sistémico</span>
+        <span class="principle"><span class="dot" style="background:#2563EB"></span>Sistematizado</span>
+        <span class="principle"><span class="dot" style="background:#111827"></span>Sistemático</span>
       </div>
     </div>
     <div class="hero-visual">
       <img class="hero-photo" src="assets/img/hero-classroom.jpg"
         srcset="assets/img/hero-classroom-sm.jpg 500w, assets/img/hero-classroom.jpg 1000w"
-        sizes="(max-width:880px) 320px, 480px"
-        alt="Docente usando su computador en un salón de clase" loading="eager">
+        sizes="(max-width:880px) 90vw, 480px"
+        alt="Tecnología integrada al trabajo de una institución educativa" loading="eager">
+      <div class="hero-badge">
+        <strong>De procesos aislados a sistemas conectados.</strong>
+        <span>Personas · procesos · datos · tecnología</span>
+      </div>
     </div>
   </div>
 </section>
@@ -126,26 +103,74 @@
 <section class="pillars">
   <div class="wrap">
     <div class="head reveal">
-      <p class="eyebrow">Qué hacemos</p>
-      <h2>Tres frentes, un mismo sistema</h2>
-      <p>No vendemos software por un lado y asesoría por otro. Cada herramienta responde a un proceso institucional real, y cada proceso queda documentado y medible. Este es el resumen — el desglose completo está en Servicios.</p>
+      <div>
+        <p class="eyebrow">Qué hacemos</p>
+        <h2>Diseñamos la conexión, no solo la herramienta.</h2>
+      </div>
+      <p>No partimos de una tecnología específica. Primero entendemos el problema, mapeamos el proceso y diseñamos la arquitectura. Después construimos e integramos la solución que tenga sentido.</p>
     </div>
     <div class="pillar-list reveal">
       <a href="servicios.html#software" class="pillar">
         <span class="num">01</span>
-        <div><h3>Desarrollo de software</h3><p>Calificaciones, asistencia, planeación con IA, LMS personalizado, gestión administrativa y un asistente de IA transversal.</p></div>
-        <span class="goto">Ver detalle →</span>
+        <div><h3>Productos y sistemas digitales</h3><p>Software académico, LMS, automatización, asistentes de IA, integraciones y herramientas diseñadas alrededor del proceso institucional.</p></div>
+        <span class="goto">Explorar →</span>
       </a>
       <a href="servicios.html#procesos" class="pillar">
         <span class="num">02</span>
-        <div><h3>Asesoría en gestión de procesos educativos</h3><p>Diagnóstico, documentación de procesos, análisis de encuestas institucionales e indicadores de calidad.</p></div>
-        <span class="goto">Ver detalle →</span>
+        <div><h3>Procesos, datos y arquitectura</h3><p>Diagnóstico, mapas de proceso, indicadores, gobierno de información y diseño de sistemas que hacen visible cómo funciona la organización.</p></div>
+        <span class="goto">Explorar →</span>
       </a>
       <a href="servicios.html#talento" class="pillar">
         <span class="num">03</span>
-        <div><h3>Asesoría en talento humano</h3><p>Asignación docente basada en datos, control de ausentismo, bienestar y acompañamiento en selección.</p></div>
-        <span class="goto">Ver detalle →</span>
+        <div><h3>Transformación y adopción</h3><p>Acompañamos a los equipos para que los cambios tecnológicos se conviertan en prácticas sostenibles y decisiones apoyadas en datos.</p></div>
+        <span class="goto">Explorar →</span>
       </a>
+    </div>
+  </div>
+</section>
+
+<section class="brand-system">
+  <div class="wrap">
+    <p class="eyebrow on-dark">Ecosistema NEXO</p>
+    <h2>Una marca. Varias capacidades conectadas.</h2>
+    <p class="intro">NEXO SAS funciona como marca paraguas. Education es nuestro punto de partida, pero la arquitectura permite construir productos y servicios especializados sin fragmentar la experiencia.</p>
+    <div class="brand-lines">
+      <article class="brand-line"><b>01</b><strong>NEXO Education</strong><span>Transformación digital y sistemas para instituciones educativas.</span></article>
+      <article class="brand-line"><b>02</b><strong>NEXO AI</strong><span>Agentes, copilotos, automatización e inteligencia artificial aplicada.</span></article>
+      <article class="brand-line"><b>03</b><strong>NEXO Data</strong><span>Modelos de datos, indicadores, analítica y dashboards.</span></article>
+      <article class="brand-line"><b>04</b><strong>NEXO Systems</strong><span>Arquitectura, software, integraciones y plataformas.</span></article>
+      <article class="brand-line"><b>05</b><strong>NEXO Lab</strong><span>Investigación, prototipos y nuevos productos.</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="method" id="metodo">
+  <div class="wrap">
+    <div class="method-head reveal">
+      <div>
+        <p class="eyebrow">Método NEXO</p>
+        <h2>Entender antes de construir.</h2>
+      </div>
+      <p>Seis movimientos convierten un problema difuso en una solución implementable. La tecnología aparece cuando ya sabemos qué debe resolver y cómo se conectará con el resto del sistema.</p>
+    </div>
+    <div class="method-grid reveal">
+      <article class="method-card"><span class="step">01 · DISCOVER</span><h3>Entender</h3><p>Personas, problemas, contexto, datos y sistemas existentes.</p></article>
+      <article class="method-card"><span class="step">02 · MAP</span><h3>Mapear</h3><p>Procesos, actores, entradas, salidas, evidencias y decisiones.</p></article>
+      <article class="method-card"><span class="step">03 · BLUEPRINT</span><h3>Diseñar</h3><p>Arquitectura, experiencia, modelo de datos e integraciones.</p></article>
+      <article class="method-card"><span class="step">04 · BUILD</span><h3>Construir</h3><p>Software, automatizaciones, dashboards y soluciones de IA.</p></article>
+      <article class="method-card"><span class="step">05 · CONNECT</span><h3>Conectar</h3><p>Personas, procesos, sistemas, información e inteligencia artificial.</p></article>
+      <article class="method-card"><span class="step">06 · EVOLVE</span><h3>Evolucionar</h3><p>Adopción, indicadores, gobierno, iteración y escalamiento.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="commands">
+  <div class="wrap">
+    <p class="eyebrow">NEXO /commands</p>
+    <h2 style="font-size:clamp(28px,3.6vw,40px);margin-top:14px;max-width:18ch;">Un lenguaje común para pensar y construir.</h2>
+    <p style="color:var(--muted);max-width:62ch;margin-top:14px;">Nuestro sistema de trabajo se expresa también como comandos: una biblioteca para estructurar investigación, arquitectura, procesos, producto y comunicación visual.</p>
+    <div class="command-cloud">
+      <code>/discover</code><code>/process-map</code><code>/blueprint</code><code>/architecture</code><code>/roadmap</code><code>/prd</code><code>/dashboard</code><code>/infograph</code><code>/build</code><code>/connect</code><code>/iterate</code>
     </div>
   </div>
 </section>
@@ -153,32 +178,31 @@
 <section class="cta-band">
   <div class="wrap">
     <div>
-      <h2>¿Listo para ver cómo encaja esto en tu institución?</h2>
-      <p>Una conversación de 30 minutos basta para entender tu contexto y proponerte algo concreto.</p>
+      <p class="eyebrow on-dark">Conversemos</p>
+      <h2>¿Qué necesita conectarse mejor en tu institución?</h2>
+      <p>Partimos de tu contexto actual y diseñamos una ruta concreta, no una solución genérica.</p>
     </div>
-    <a href="contacto.html" class="btn-primary"><i class="ti ti-calendar-event"></i> Agendar una cita</a>
+    <a href="contacto.html" class="btn-primary" style="background:#fff;color:#111827;"><i class="ti ti-calendar-event"></i> Agendar conversación</a>
   </div>
 </section>
 
-<footer class="site" id="contacto-footer">
+<footer class="site">
   <div class="wrap">
     <div class="footer-top">
       <div>
         <div class="footer-brand">
-          <svg viewBox="6 10 76 76" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px" aria-hidden="true">
-            <rect x="10" y="54" width="28" height="28" rx="6" fill="#8ecae6"/><rect x="30" y="34" width="28" height="28" rx="6" fill="#219ebc"/><rect x="50" y="14" width="28" height="28" rx="6" fill="#fb8500"/>
-          </svg>
+          <img src="assets/logo-nexo.svg" alt="" width="34" height="34">
           <span class="brand-word">NEXO<span>SAS</span></span>
         </div>
-        <p class="footer-tag">Consultoría educativa para la transición y el sostenimiento de una cultura digital.</p>
+        <p class="footer-tag">Educación · procesos · datos · tecnología</p>
       </div>
       <div class="footer-cta">
         <a href="mailto:contacto@nexosas.com"><i class="ti ti-mail"></i> contacto@nexosas.com</a>
-        <a href="contacto.html"><i class="ti ti-calendar-event"></i> Agendar una cita</a>
+        <a href="contacto.html"><i class="ti ti-calendar-event"></i> Agendar conversación</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Nexo SAS</p>
+      <p>© 2026 NEXO SAS</p>
       <div class="footer-principles"><span>Sistémico</span><span>·</span><span>Sistematizado</span><span>·</span><span>Sistemático</span></div>
     </div>
   </div>
@@ -187,9 +211,9 @@
 <script src="assets/nav.js"></script>
 <script src="assets/chatbot.js"></script>
 <script>
-  const els = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:0.15});
-  els.forEach(el=>io.observe(el));
+const els=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+els.forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
